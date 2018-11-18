@@ -1,0 +1,41 @@
+.deleteUser {
+	cursor: pointer;
+}
+
+.header {
+	font-size: 1.5rem;
+	margin-bottom: 8px;
+}
+
+user {
+	margin-top: 10px;
+}
+
+.userList {
+	margin-right: 50px;
+}
+
+.validation-message {
+	color: red;
+}
+
+button[type="submit"] {
+    width: 100%;
+}
+
+.right-side {
+	text-align: right;
+}
+
+img {
+	width: 40px;
+	height: 40px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+a {
+    color: black;
+}
