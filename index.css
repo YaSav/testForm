@@ -1,4 +1,4 @@
-.deleteUser {
+.delete-user {
 	cursor: pointer;
 }
 
@@ -7,7 +7,7 @@
 	margin-bottom: 8px;
 }
 
-user {
+user-details {
 	margin-top: 10px;
 }
 

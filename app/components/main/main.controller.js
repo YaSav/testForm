@@ -1,16 +1,16 @@
 'use strict';
 angular
 	.module('regApp')
-	.component('userList', {
-		controller: 'userListController',
+	.component('main', {
+		controller: 'mainController',
 		controllerAs: '$ctrl',
-		templateUrl: './app/components/user-list/user-list.tpl.html'
+		templateUrl: './app/components/main/main.tpl.html'
 	})
-	.controller('userListController', function () {
+	.controller('mainController', function () {
         this.users = [];
 
         this.addUser = function (user) {
-          console.log("user-list", user);
+          console.log("main", user);
           this.users.push(user);
         }
   

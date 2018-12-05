@@ -1,19 +1,18 @@
-<div class="row">
-    <div class="col-3">
+
+    <div >
         {{$ctrl.currentUser.name}}
     </div>
-    <div class="col-2">
+    <div >
         <i class='fas fa-{{$ctrl.currentUser.sex}}'></i>
     </div>
-    <div class="col-5 rightSide">
-        <div ng-show="$ctrl.currentUser.gitHubAccount">
+    <div class="right-side">
+        <div ng-if="$ctrl.currentUser.gitHubAccount">
             <a href="https://github.com/{{$ctrl.currentUser.gitHubAccount}}">
                 {{$ctrl.currentUser.gitHubAccount}}
             </a>
             <img ng-src="{{$ctrl.currentUser.icon}}">
         </div>
     </div>
-    <div class="col-2">
-        <i class="fas fa-times-circle deleteUse" ng-click="$ctrl.delete()"></i>
+    <div >
+        <i class="fas fa-times-circle delete-user" ng-click="$ctrl.delete()"></i>
     </div>
-</div>

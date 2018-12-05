@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8"/>
-<title>Registration</title>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<script src="app.js"></script>
-<script src="app/services/githubService.js"></script>
-<script src="app/components/user-input/user-input.controller.js"></script>
-<script src="app/components/user-details/user-details.controller.js"></script>
-<script src="app/components/user-list/user-list.controller.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-<link rel="stylesheet" href="index.css">
+    <meta charset="utf-8" />
+    <title>Registration</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="app/services/githubService.js"></script>
+    <script src="app/components//main/main.controller.js"></script>
+    <script src="app/components/user-input/user-input.controller.js"></script>
+    <script src="app/components/user-details/user-details.controller.js"></script>
+    <script src="app/components/user-list/user-list.controller.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
 </head>
-<body>
-<div ng-app="regApp">
-<user-list></user-list>
-</div>
+
+<body ng-app="regApp">
+    <div class="container">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#!list">Користувачі</a>
+            <a class="navbar-brand" href="#!add-user">Додати користувача</a>
+        </nav>
+    </div>
+    <main></main>
 </body>
+
 </html>

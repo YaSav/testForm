@@ -9,9 +9,7 @@ angular
         templateUrl: './app/components/user-input/user-input.tpl.html'
     })
     .controller('userInputController', function (githubService) {
-        this.user = {
-            name: "wer"
-        };
+        this.user = {};
         this.incorrectAccount = false;
 
         this.resetForm = function (form) {
@@ -22,28 +20,19 @@ angular
         }
 
         this.addUser = function () {
-            var newUser = {
-                name: this.user.name,
-                sex: this.user.sex,
-                number: this.user.number,
-                email: this.user.email,
-                gitHubAccount: this.user.hasGitHub && this.user.gitHubAccount,
-                icon: this.user.icon
-            }
+            const { user } = this;
 
-            this.onAddUser({ user: newUser });
+            this.onAddUser({ user });
         };
 
         this.submitForm = function (form) {
-            const requiredError = form.$error.required;
-            const isGitHubEmpty = requiredError && requiredError.length === 1 && requiredError[0].$name === 'githubAccount';
-            if (form.$invalid && !(isGitHubEmpty && !this.user.hasGitHub)) {
+            if (form.$invalid) {
                 return;
             }
 
             if (this.user.hasGitHub) {
                 githubService.getGitHubAccount(this.user.gitHubAccount)
-                    .then((data) => {
+                    .then(data => {
                         this.user.icon = data.avatar_url;
                         this.addUser();
                         this.resetForm(form);
@@ -53,6 +42,7 @@ angular
                         console.log(error);
                     });
             } else {
+                this.user.gitHubAccount = '';
                 this.addUser();
                 this.resetForm(form);
             }

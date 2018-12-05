@@ -1,12 +1,5 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 col-12 ">
-            <div class="header">Користувачі</div>
-            <div ng-show="$ctrl.users.length === 0">У системі немає користувачів</div>
-            <div class="userList" ng-repeat="user in $ctrl.users">
-                <user-details current-user="user" on-delete="$ctrl.deleteUser(user)"></user-details>
-            </div>
-        </div>
-        <user-input class="col-md-6 col-12" on-add-user="$ctrl.addUser(user)"></user-input>
-    </div>
+<div class="header">Користувачі</div>
+<div ng-if="!$ctrl.users.length">У системі немає користувачів</div>
+<div class="userList" ng-repeat="user in $ctrl.users">
+    <user-details current-user="user" on-delete="$ctrl.deleteUser(user)"></user-details>
 </div>

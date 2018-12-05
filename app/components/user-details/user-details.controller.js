@@ -9,8 +9,7 @@ angular
 		controllerAs: '$ctrl',
 		templateUrl: './app/components/user-details/user-details.tpl.html'
 	})
-	.controller('userDetailsController', function () {
-		
+	.controller('userDetailsController', function () {	
 		this.delete = function () {
 			this.onDelete({ user: this.currentUser });
 		};

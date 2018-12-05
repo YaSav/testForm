@@ -4,7 +4,7 @@
         <div class="form-group ">
             <label>Ім'я:</label>
             <input required ng-model="$ctrl.user.name" type="text" name="name" class="form-control" />
-            <div ng-show="userForm.$submitted && userForm.name.$invalid" class="validation-message">Заповніть поле, щоб продовжити</div>
+            <div ng-if="userForm.$submitted && userForm.name.$invalid" class="validation-message">Заповніть поле, щоб продовжити</div>
         </div>
         <div class="form-group">
             <label>Стать:</label>
@@ -12,28 +12,28 @@
                 <option value="male">Чоловіча</option>
                 <option value="female">Жіноча</option>
             </select>
-            <div ng-show="userForm.$submitted && userForm.sex.$invalid" class="validation-message">Заповніть поле, щоб продовжити</div>
+            <div ng-if="userForm.$submitted && userForm.sex.$invalid" class="validation-message">Заповніть поле, щоб продовжити</div>
         </div>
         <div class="form-group">
             <label>Номер телефону:</label>
             <input required type="number" ng-model="$ctrl.user.number" name="number" class="form-control" />
-            <div ng-show="userForm.$submitted && userForm.number.$invalid" class="validation-message">Заповніть поле, щоб продовжити</div>
+            <div ng-if="userForm.$submitted && userForm.number.$invalid" class="validation-message">Заповніть поле, щоб продовжити</div>
         </div>
         <div class="form-group">
             <label>Email:</label>
             <input required ng-model="$ctrl.user.email" type="email" name="email" class="form-control" />
-            <div ng-show="userForm.$submitted && userForm.email.$error.required" class="validation-message">Заповніть поле, щоб продовжити</div>
-            <div ng-show="userForm.$submitted && userForm.email.$error.email" class="validation-message">Невірний email</div>
+            <div ng-if="userForm.$submitted && userForm.email.$error.required" class="validation-message">Заповніть поле, щоб продовжити</div>
+            <div ng-if="userForm.$submitted && userForm.email.$error.email" class="validation-message">Невірний email</div>
         </div>
         <div class="form-group form-check">
             <input ng-model="$ctrl.user.hasGitHub" type="checkbox" class="form-check-input" value="hasGithub" id="hasGithub" />
             <label class="form-check-label">У мене є Github!</label>
         </div>
-        <div ng-show="$ctrl.user.hasGitHub" class="form-group" id="githubAccountBlock">
+        <div ng-if="$ctrl.user.hasGitHub" class="form-group">
             <label>Github акаунт</label>
             <input required ng-model="$ctrl.user.gitHubAccount" type="text" name="githubAccount" class="form-control" />
-            <div ng-show="userForm.$submitted && $ctrl.user.hasGitHub && userForm.githubAccount.$invalid" class="validation-message">Заповніть поле, щоб продовжити</div>
-            <div ng-show="userForm.$submitted && $ctrl.user.hasGitHub && $ctrl.incorrectAccount" class="validation-message">Не знайдено такого користувача Github. Вкажіть правильний логін або зніміть позначку про наявність аккаунта</div>
+            <div ng-if="userForm.$submitted && $ctrl.user.hasGitHub && userForm.githubAccount.$invalid" class="validation-message">Заповніть поле, щоб продовжити</div>
+            <div ng-if="userForm.$submitted && $ctrl.user.hasGitHub && $ctrl.incorrectAccount" class="validation-message">Не знайдено такого користувача Github. Вкажіть правильний логін або зніміть позначку про наявність аккаунта</div>
         </div>
         <button type="submit">Додати користувача</button>
     </fieldset>
