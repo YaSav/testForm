@@ -1,15 +1,15 @@
 angular
 	.module('regApp')
-	.component('userDetails', {
+	.component('userRow', {
 		bindings: {
 			currentUser: '<',
 			onDelete: '&'
 		},
-		controller: 'userDetailsController',
+		controller: 'userRowController',
 		controllerAs: '$ctrl',
-		templateUrl: './app/components/user-details/user-details.tpl.html'
+		templateUrl: './app/components/user-row/user-row.tpl.html'
 	})
-	.controller('userDetailsController', function () {	
+	.controller('userRowController', function () {	
 		this.delete = function () {
 			this.onDelete({ user: this.currentUser });
 		};

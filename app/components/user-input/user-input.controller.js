@@ -8,7 +8,7 @@ angular
         controllerAs: '$ctrl',
         templateUrl: './app/components/user-input/user-input.tpl.html'
     })
-    .controller('userInputController', function (githubService) {
+    .controller('userInputController', function ($location, githubService) {
         this.user = {};
         this.incorrectAccount = false;
 
@@ -17,10 +17,12 @@ angular
             this.incorrectAccount = false;
             form.$setPristine();
             form.$setUntouched();
+            $location.path("/users")
         }
 
         this.addUser = function () {
             const { user } = this;
+            user.id = `${user.name}${(new Date()).getTime()}`
 
             this.onAddUser({ user });
         };
@@ -36,6 +38,7 @@ angular
                         this.user.icon = data.avatar_url;
                         this.addUser();
                         this.resetForm(form);
+
                     })
                     .catch((error) => {
                         this.incorrectAccount = true;

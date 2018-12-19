@@ -1,11 +1,11 @@
 
-    <div >
-        {{$ctrl.currentUser.name}}
+    <div class="item">
+        <a ng-href="#!users/{{$ctrl.currentUser.id}}">{{$ctrl.currentUser.name}}</a>
     </div>
-    <div >
+    <div class="item">
         <i class='fas fa-{{$ctrl.currentUser.sex}}'></i>
     </div>
-    <div class="right-side">
+    <div class="item right-side">
         <div ng-if="$ctrl.currentUser.gitHubAccount">
             <a href="https://github.com/{{$ctrl.currentUser.gitHubAccount}}">
                 {{$ctrl.currentUser.gitHubAccount}}
@@ -13,6 +13,6 @@
             <img ng-src="{{$ctrl.currentUser.icon}}">
         </div>
     </div>
-    <div >
+    <div class="item">
         <i class="fas fa-times-circle delete-user" ng-click="$ctrl.delete()"></i>
     </div>

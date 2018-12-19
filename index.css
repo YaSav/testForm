@@ -7,12 +7,29 @@
 	margin-bottom: 8px;
 }
 
-user-details {
+.content {
+	margin: 10px 20px;
+}
+user-row {
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	align-items: stretch;
+}
+
+.info-block {
+	background-color: #e8e7e7;
+	padding: 0px 5px;
+	border-radius: 5px;
 	margin-top: 10px;
 }
 
-.userList {
-	margin-right: 50px;
+.item {
+	flex-grow: 1;
+}
+
+nav {
+	margin-top: 20px;
 }
 
 .validation-message {
@@ -39,3 +56,34 @@ img {
 a {
     color: black;
 }
+
+
+
+
+
+
+
+#photoG {
+	height: 350px;
+	width: 100%;
+	background-repeat: no-repeat;
+}
+
+.bg0 {
+    background-image: url(app/images/1_m.jpg); 
+    }
+
+.bg1 {
+    background-image: url(app/images/2.JPG); 
+}
+
+.bg2 {
+    background-image: url(app/images/23365096_10208053221688403_954618729_n.jpg); 
+}
+
+.bg3 {
+    background-image: url(app/images/HoneycombSP3black1-300x300.jpg); 
+}
+
+
+
