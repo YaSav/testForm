@@ -17,13 +17,13 @@ angular
             this.incorrectAccount = false;
             form.$setPristine();
             form.$setUntouched();
-            $location.path("/users")
+            $location.path("/users");
         }
 
         this.addUser = function () {
             const { user } = this;
-            user.id = `${user.name}${(new Date()).getTime()}`
 
+            user.id = `${user.name}${(new Date()).getTime()}`
             this.onAddUser({ user });
         };
 

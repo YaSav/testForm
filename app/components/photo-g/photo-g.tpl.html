@@ -1,8 +1,10 @@
-<div id ="photoG">
-  <div 
-    class="image"
-    ng-style="{
-        'background-image': 'url(' + $ctrl.activeImageUrl + ')'
-    }"
+<div id="photoG">
+    <div class="image"
+        ng-style="{'background-image':'url(' + activeImageUrl + ')'}"
     ></div>
+    <div class="view-count-container">
+        <div class="view-count">
+            {{viewCount}}
+        </div>
+    </div>
 </div>

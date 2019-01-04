@@ -13,19 +13,32 @@
 user-row {
 	display: flex;
 	justify-content: space-around;
-	flex-flow: row wrap;
-	align-items: stretch;
 }
 
 .info-block {
 	background-color: #e8e7e7;
-	padding: 0px 5px;
+	padding: 0 5px;
 	border-radius: 5px;
 	margin-top: 10px;
 }
 
+.user-detail {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.user-detail .info-block {
+	width: calc(50% - 10px);
+	margin: 10px 5px;
+}
+
 .item {
-	flex-grow: 1;
+	width: 25%;
+	height: 100%;
+}
+
+.item-with-icon {
+	text-align: center;
 }
 
 nav {
@@ -44,7 +57,7 @@ button[type="submit"] {
 	text-align: right;
 }
 
-img {
+.item img {
 	width: 40px;
 	height: 40px;
 }
@@ -54,5 +67,6 @@ img {
 }
 
 a {
-    color: black;
+	color: black;
+	text-decoration: none;
 }

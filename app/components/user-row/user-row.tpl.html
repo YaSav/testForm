@@ -2,7 +2,7 @@
     <div class="item">
         <a ng-href="#!users/{{$ctrl.currentUser.id}}">{{$ctrl.currentUser.name}}</a>
     </div>
-    <div class="item">
+    <div class="item item-with-icon">
         <i class='fas fa-{{$ctrl.currentUser.sex}}'></i>
     </div>
     <div class="item right-side">
@@ -13,6 +13,6 @@
             <img ng-src="{{$ctrl.currentUser.icon}}">
         </div>
     </div>
-    <div class="item">
+    <div class="item item-with-icon">
         <i class="fas fa-times-circle delete-user" ng-click="$ctrl.delete()"></i>
     </div>

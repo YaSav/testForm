@@ -3,7 +3,7 @@ angular
 	.module('regApp')
 	.component('userList', {
     bindings: {
-			users: '<',//'='
+			users: '<',
 		},
 		controller: 'userListController',
 		controllerAs: '$ctrl',

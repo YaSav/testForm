@@ -1,12 +1,14 @@
-<div class="info-block">
-    {{$ctrl.user.name}}
-</div>
-<div class="info-block">
-    <i class='fas fa-{{$ctrl.user.sex}}'></i>
-</div>
-<div class="info-block">
-    {{$ctrl.user.email}}
-</div>
-<div class="info-block">
-    {{$ctrl.user.number}}
+<div class="user-detail">
+    <div class="info-block">
+        {{$ctrl.user.name}}
+    </div>
+    <div class="info-block">
+        <i class='fas fa-{{$ctrl.user.sex}}'></i>
+    </div>
+    <div class="info-block">
+        {{$ctrl.user.email}}
+    </div>
+    <div class="info-block">
+        {{$ctrl.user.number|phone}}
+    </div>
 </div>
