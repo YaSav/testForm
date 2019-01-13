@@ -1,10 +1,21 @@
-<div id="photoG">
+<div id="photoG"
+    ng-style="{'color': activeImage.color }">
     <div class="image"
-        ng-style="{'background-image':'url(' + activeImageUrl + ')'}"
+        ng-style="{'background-image':'url(' + activeImage.url + ')'}"
     ></div>
     <div class="view-count-container">
         <div class="view-count">
-            {{viewCount}}
+            {{activeImage.viewCount}}
         </div>
     </div>
+    <div class="comment-container">
+        <div class="comment">
+            {{activeImage.comment}}
+        </div>
+    </div>
+    <div class="button-container" >
+        <div ng-repeat="image in images"
+            class="img-button"
+            ng-click="setImage(image)"
+        ></div>
 </div>

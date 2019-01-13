@@ -7,6 +7,9 @@ app.directive('phonenumber', function () {
 			var phoneRegex = /^(\+38)?[ ]?(\(([0-9]{3})\)|([0-9]{3}))[- ]?([0-9]{3})[- ]?([0-9]{4})$/;
 
 			$ctrl.$validators.phonenumber = function (modelValue, viewValue) {
+				if(!modelValue) {
+					return true;
+				}
 				return modelValue.match(phoneRegex);
 			};
 		}
